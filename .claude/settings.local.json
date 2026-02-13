@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(python:*)",
-      "Bash(docker run:*)"
+      "Bash(docker run:*)",
+      "Bash(MSYS_NO_PATHCONV=1 docker run:*)"
     ]
   }
 }
