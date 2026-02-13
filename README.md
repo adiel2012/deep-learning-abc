@@ -117,6 +117,18 @@ The notebooks below implement the key improvements to the Transformer architectu
 
 ---
 
+### Modern Frontiers (2020-2024)
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/diffusion_ddpm.ipynb) **diffusion_ddpm.ipynb** | Advanced | **Diffusion (DDPM)**. Denoising Diffusion Probabilistic Models from scratch. Forward noise process and reverse U-Net denoising. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/clip_multimodal.ipynb) **clip_multimodal.ipynb** | Advanced | **CLIP (Multimodal)**. Contrastive Language-Image Pre-training. Aligning image and text encoders shared embedding space. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/mamba_ssm.ipynb) **mamba_ssm.ipynb** | Advanced | **Mamba (SSM)**. State Space Models with Selective Scan. Linear-time sequence modeling alternative to Transformers. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/rlhf_dpo.ipynb) **rlhf_dpo.ipynb** | Advanced | **RLHF (DPO)**. Direct Preference Optimization. Aligning LLMs to human feedback without a complex Reward Model/PPO. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/efficient_inference.ipynb) **efficient_inference.ipynb** | Advanced | **Efficiency**. FlashAttention concept (tiling simulation) and Quantization (AbsMax/ZeroPoint) implementation. |
+
+---
+
 ### Then vs Now: Summary
 
 | Component | Original (2017) | Modern (2024) |
@@ -139,6 +151,14 @@ The notebooks below implement the key improvements to the Transformer architectu
 | **Positional Encoding** | Learned Absolute | Learned Absolute | Relative Bias (Bucketed) | Learned Absolute | Relative (Sinusoidal) |
 | **Normalization** | Post-LN | Pre-LN | Pre-LN (No bias) | Pre-LN | Pre-LN |
 | **Context** | 512 | 1024 | 512 | Fixed by patch count | Extended / 4096+ |
+
+### The Next Frontier (2024+)
+
+| Feature | Diffusion (Generative) | Mamba (Architecture) | DPO (Alignment) | FlashAttn (Efficiency) |
+|---------|------------------------|----------------------|-----------------|------------------------|
+| **Core Idea** | Iterative Denoising | Selective State Space | Analytical Preference Loss | Tiling & Recomputation |
+| **Replaces** | GANs / VAEs | Transformers (Attention) | PPO / Reward Models | Standard Attention |
+| **Key Benefit** | High Quality / Diversity | Linear Time $O(N)$ | Stability / Simplicity | Memory Linear $O(N)$ |
 
 ## Running Locally
 
