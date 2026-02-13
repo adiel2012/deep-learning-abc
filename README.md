@@ -131,7 +131,7 @@ The notebooks below implement the key improvements to the Transformer architectu
 
 ### Model Evolution: Then vs Now
 
-| Feature | [BERT](bert_family.ipynb) (2018) | [GPT-2](gpt2.ipynb) (2019) | [T5](t5.ipynb) (2020) | [ViT](vision_transformer.ipynb) (2020) | [Longformer](longformer.ipynb)/[XL](transformer_xl.ipynb) (2019/20) |
+| Feature | [BERT](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/bert_family.ipynb) (2018) | [GPT-2](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/gpt2.ipynb) (2019) | [T5](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/t5.ipynb) (2020) | [ViT](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/vision_transformer.ipynb) (2020) | [Longformer](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/longformer.ipynb)/[XL](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/transformer_xl.ipynb) (2019/20) |
 |---------|-------------|--------------|-----------|------------|-------------------------|
 | **Architecture** | Encoder-only | Decoder-only | Encoder-Decoder | Encoder-only (on patches) | Encoder-only (Recurrent/Sparse) |
 | **Objective** | MLM + NSP | Causal LM | Span Corruption (Text-to-Text) | Supervised Classif. | Autoregressive / MLM |
