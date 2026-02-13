@@ -15,6 +15,14 @@ Two complementary notebooks covering the same topic at different abstraction lev
 
 **Topics covered:** scaled dot-product attention, causal masking, multi-head attention (loop and batched versions), attention weight visualization.
 
+### Positional Encoding
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/positional_encoding.ipynb) **positional_encoding.ipynb** | Low-level | Why attention needs position info, sinusoidal encoding math & implementation, learned embeddings, visualizations. |
+
+**Topics covered:** permutation invariance problem, sinusoidal PE formula & properties, frequency spectrum intuition, relative position via dot product, learned vs fixed embeddings, scaling with √d_model.
+
 ## Running Locally
 
 ```bash
