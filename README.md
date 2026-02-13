@@ -23,6 +23,14 @@ Two complementary notebooks covering the same topic at different abstraction lev
 
 **Topics covered:** permutation invariance problem, sinusoidal PE formula & properties, frequency spectrum intuition, relative position via dot product, learned vs fixed embeddings, scaling with √d_model.
 
+### Transformer Encoder
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/transformer_encoder.ipynb) **transformer_encoder.ipynb** | Low-level | Full encoder from "Attention Is All You Need" built from raw ops. Layer norm, residual connections, FFN, stacked layers. |
+
+**Topics covered:** residual connections (gradient highway), layer normalization (vs batch norm), position-wise FFN, encoder layer assembly, N-layer stacking, parameter counting, attention visualization across layers, representation evolution, residual vs no-residual comparison.
+
 ## Running Locally
 
 ```bash
