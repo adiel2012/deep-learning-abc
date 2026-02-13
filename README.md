@@ -125,6 +125,7 @@ The notebooks below implement the key improvements to the Transformer architectu
 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/clip_multimodal.ipynb) **clip_multimodal.ipynb** | Advanced | **CLIP (Multimodal)**. Contrastive Language-Image Pre-training. Aligning image and text encoders shared embedding space. |
 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/mamba_ssm.ipynb) **mamba_ssm.ipynb** | Advanced | **Mamba (SSM)**. State Space Models with Selective Scan. Linear-time sequence modeling alternative to Transformers. |
 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/rlhf_dpo.ipynb) **rlhf_dpo.ipynb** | Advanced | **RLHF (DPO)**. Direct Preference Optimization. Aligning LLMs to human feedback without a complex Reward Model/PPO. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/deepseek_r1_grpo.ipynb) **deepseek_r1_grpo.ipynb** | Advanced | **DeepSeek-R1 (GRPO)**. Group Relative Policy Optimization. Reasoning enforcement without a critic model. |
 | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/efficient_inference.ipynb) **efficient_inference.ipynb** | Advanced | **Efficiency**. FlashAttention concept (tiling simulation) and Quantization (AbsMax/ZeroPoint) implementation. |
 
 ---
@@ -154,11 +155,11 @@ The notebooks below implement the key improvements to the Transformer architectu
 
 ### The Next Frontier (2024+)
 
-| Feature | Diffusion (Generative) | Mamba (Architecture) | DPO (Alignment) | FlashAttn (Efficiency) |
-|---------|------------------------|----------------------|-----------------|------------------------|
-| **Core Idea** | Iterative Denoising | Selective State Space | Analytical Preference Loss | Tiling & Recomputation |
-| **Replaces** | GANs / VAEs | Transformers (Attention) | PPO / Reward Models | Standard Attention |
-| **Key Benefit** | High Quality / Diversity | Linear Time $O(N)$ | Stability / Simplicity | Memory Linear $O(N)$ |
+| Feature | Diffusion (Generative) | Mamba (Architecture) | DPO (Alignment) | DeepSeek-R1 (Reasoning) |
+|---------|------------------------|----------------------|-----------------|-------------------------|
+| **Core Idea** | Iterative Denoising | Selective State Space | Analytical Preference Loss | Group Relative Policy Opt (GRPO) |
+| **Replaces** | GANs / VAEs | Transformers (Attention) | PPO / Reward Models | PPO with Critic |
+| **Key Benefit** | High Quality / Diversity | Linear Time $O(N)$ | Stability / Simplicity | Compute-Efficient Reasoning |
 
 ## Running Locally
 
