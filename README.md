@@ -79,6 +79,44 @@ The notebooks below implement the key improvements to the Transformer architectu
 
 ---
 
+## BERT Family & Fine-Tuning
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/bert_family.ipynb) **bert_family.ipynb** | Mid-level | Comprehensive implementation of **BERT**, **RoBERTa** (no NSP, dynamic mask), **ALBERT** (param sharing), **DistilBERT** (distillation), and **DeBERTa** (disentangled attention). |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/bert_fine_tuning.ipynb) **bert_fine_tuning.ipynb** | High-level | Fine-tuning BERT for Sequence Classification, Token Classification (NER), and Question Answering (SQuAD). |
+
+### GPT Family & Generative Models
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/gpt2.ipynb) **gpt2.ipynb** | Mid-level | **GPT-2** from scratch. Causal masked attention, pre-norm architecture, and text generation loop. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/gpt3.ipynb) **gpt3.ipynb** | Mid-level | **GPT-3** architecture (scale & patterns) and the concept of few-shot in-context learning. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/t5.ipynb) **t5.ipynb** | Mid-level | **T5** (Text-to-Text Transfer Transformer). Encoder-decoder architecture with relative positional bias and unified task format. |
+
+### Advanced Transformer Architectures
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/xlnet.ipynb) **xlnet.ipynb** | Advanced | **XLNet**: Permutation Language Modeling and Two-Stream Attention mechanism suitable for autoregressive bidirectional context. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/transformer_xl.ipynb) **transformer_xl.ipynb** | Advanced | **Transformer-XL**: Segment-level recurrence and relative positional encodings for long-term dependency modeling. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/longformer.ipynb) **longformer.ipynb** | Advanced | **Longformer**: Sparse attention mechanism combining sliding window, dilated window, and global attention for long sequences. |
+
+### Computer Vision
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/vision_transformer.ipynb) **vision_transformer.ipynb** | Mid-level | **Vision Transformer (ViT)**. Patch embeddings, CLS token for classification, and position embeddings applied to images. |
+
+### Generative AI
+
+| Notebook | Level | Description |
+|----------|-------|-------------|
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/gan.ipynb) **gan.ipynb** | Mid-level | **GAN** (Generative Adversarial Network). Minimax game between Generator and Discriminator. |
+| [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adiel2012/deep-learning-abc/blob/main/vae.ipynb) **vae.ipynb** | Mid-level | **VAE** (Variational Autoencoder). Evidence Lower Bound (ELBO) maximization, reparameterization trick, and latent space sampling. |
+
+---
+
 ### Then vs Now: Summary
 
 | Component | Original (2017) | Modern (2024) |
@@ -91,11 +129,36 @@ The notebooks below implement the key improvements to the Transformer architectu
 | Context Length | 512 tokens | 8K–128K+ tokens |
 | Fine-tuning | Full model | LoRA / QLoRA adapters |
 
+### Model Evolution: Then vs Now
+
+| Feature | [BERT](bert_family.ipynb) (2018) | [GPT-2](gpt2.ipynb) (2019) | [T5](t5.ipynb) (2020) | [ViT](vision_transformer.ipynb) (2020) | [Longformer](longformer.ipynb)/[XL](transformer_xl.ipynb) (2019/20) |
+|---------|-------------|--------------|-----------|------------|-------------------------|
+| **Architecture** | Encoder-only | Decoder-only | Encoder-Decoder | Encoder-only (on patches) | Encoder-only (Recurrent/Sparse) |
+| **Objective** | MLM + NSP | Causal LM | Span Corruption (Text-to-Text) | Supervised Classif. | Autoregressive / MLM |
+| **Attention** | Bidirectional Full | Causal Full | Bidirectional Enc / Causal Dec | Bidirectional Full | Recurrent / Sparse |
+| **Positional Encoding** | Learned Absolute | Learned Absolute | Relative Bias (Bucketed) | Learned Absolute | Relative (Sinusoidal) |
+| **Normalization** | Post-LN | Pre-LN | Pre-LN (No bias) | Pre-LN | Pre-LN |
+| **Context** | 512 | 1024 | 512 | Fixed by patch count | Extended / 4096+ |
+
 ## Running Locally
 
 ```bash
 pip install torch matplotlib
 jupyter notebook
 ```
+
+## Running with Docker
+
+To ensure a consistent environment, you can run the notebooks using Docker:
+
+```bash
+# Build the image
+docker build -t dl-notebooks .
+
+# Run the container
+docker run -p 8888:8888 dl-notebooks
+```
+
+Then open the link displayed in the terminal (usually `http://127.0.0.1:8888/?token=...`).
 
 Or click any Colab badge above to run in your browser with free GPU access.
